@@ -1,9 +1,21 @@
+<!DOCTYPE html>
 <html>
+  <title>Trip Planner - {% block title %}{% endblock %}</title>
   <head>
-    <title>Trip Planner</title>
+    <!-- Bootstrap CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/stylesheets/index.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Trip Planner</h1>
-    {% block content %}{% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Script tags go here! -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTIeIAuEVvL7V5W5YdpAvRNvaH1iWJO88"></script>
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/lib/gmaps.js"></script>
   </body>
 </html>

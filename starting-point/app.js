@@ -32,10 +32,13 @@ app.use(volleyball);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// routing
-
-app.use(routes);
+// static routing
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
+
+// routing
+app.use(routes);
 
 // 404 catching, and maybe some custom error handling?
 
